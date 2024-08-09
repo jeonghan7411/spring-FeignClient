@@ -1,0 +1,22 @@
+feign:
+  url:
+    prefix: http://localhost:8080/target_server # DemoFeignClient\uC5D0\uC11C \uC0AC\uC6A9 url prefix \uAC12
+  client:
+    config:
+      default:
+        connectTimeout : 1000
+        readTimeout: 3000
+        loggerLevel: NONE
+      demo-client: #DemoFeignClient\uC5D0\uC11C \uC0AC\uC6A9\uD560 client\uC124\uC815 \uAC12  \uC5EC\uB7EC\uAC1C\uB97C \uD560 \uC218\uC788\uAE30\uB54C\uBB38\uC5D0 \uC774\uB984\uC744 \uC815\uD655\uD558\uAC8C \uB9DE\uCDB0\uC90C
+        connectTimeout: 1000
+        readTimeout: 10000
+        loggerLevel: HEADERS            #\uC5EC\uAE30\uC11C \uC124\uC815\uD55C \uAC12\uC740 FeignCustomLogger -> Logger.Level logLevel \uBCC0\uC218\uC5D0 \uD560\uB2F9\uB428
+
+#  [loggerLevel \uC635\uC158]
+#      ref : feign.Logger.Level
+#  ```
+#  NONE, // No logging.
+#  BASIC, // Log only the request method and URL and the response status code and execution time.
+#  HEADERS, // Log the basic information along with request and response headers.
+#  FULL // Log the headers, body, and metadata for both requests and responses.
+# ```
